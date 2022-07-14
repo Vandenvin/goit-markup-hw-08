@@ -1,0 +1,240 @@
+// Стилизация страницы index.html
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.section__title {
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 50px;
+}
+
+// Стилизация блока Banner
+.banner {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(to right, $gradient-banner, $gradient-banner),
+        url('../images/banner.jpg');
+    background-color: $background-second-color;
+
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+
+.banner__title {
+    color: $text-third-white-color;
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+
+    width: 700px;
+    margin: 0 auto 30px auto;
+}
+
+.banner__button {
+    display: inline-block;
+    background-color: $focus-color;
+    color: $text-third-white-color;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    min-width: 200px;
+    padding: 10px 32px;
+
+    border-style: inherit;
+    box-shadow: 0px 4px 4px $shadow-button;
+    border-radius: 4px;
+    cursor: pointer;
+
+    transition: background-color 250ms $delay;
+
+    &:hover,
+    &:focus {
+        background-color: $focus-second-color;
+    }
+}
+
+// Стилизация блока Peculiarities
+
+// Cкрываем заголовок
+.section__title--hidden {
+    @extend %hidden;
+}
+
+.peculiarities-list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.peculiarities-list__item {
+    width: 270px;
+}
+
+.peculiarities-list__thumb {
+    width: 270px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    background: $background-third-color;
+    border-radius: 4px;
+}
+
+.peculiarities-list__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+}
+
+.peculiarities-list__text {
+    color: $text-second-black-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+// Стилизация блока work
+.work {
+    padding-top: 0;
+}
+
+.work-list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.work-list__item {
+    position: relative;
+}
+
+.work-list__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $background-primary-color;
+    background-color: $background-worklist-title-color;
+}
+
+
+// Стилизация блока team
+.team {
+    background-color: $background-third-color;
+}
+
+.team-list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-list__item {
+    background-color: $background-primary-color;
+    box-shadow: $shadow-team-item-card;
+    border-radius: 0px 0px 4px 4px;
+}
+
+.team-list__img {
+    margin-bottom: 30px;
+}
+
+.team-list__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 10px;
+}
+
+.team-list__text {
+    color: $text-second-black-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 16px;
+}
+
+.team-social {
+    margin: 0 32px 30px 32px;
+}
+
+
+// Стилизация блока client
+
+.client-list {
+    @extend %list;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.client-list__thumb {
+    width: 170px;
+    height: 92px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    fill: $border-client-color;
+
+    border: 1px solid $border-client-color;
+    border-radius: 4px;
+
+    transition: fill 250ms $delay, border 250ms $delay;
+
+    &:hover,
+    &:focus {
+        fill: $focus-color;
+        border: 1px solid $focus-color;
+    }
+}
+

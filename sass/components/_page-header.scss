@@ -1,0 +1,146 @@
+// Стилизация шапки страницы
+.page-header {
+    border-bottom: 1px solid $border-header-line;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+
+// Стилизация навигации страницы (лого и сслыки переходы на другие страницы)
+
+.navigation {
+    @extend %list;
+}
+
+.header-navigation {
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    display: flex;
+    position: relative;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 50px;
+}
+
+.navigation__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    text-decoration: none;
+    color: $text-primary-black-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $delay;
+
+    &:hover,
+    &:focus {
+        color: $focus-color;
+        fill: $focus-color;
+    }
+}
+
+// Стилизация (плдчеркивание и анимация) ссылки если страница текущая
+.navigation__link--current {
+    color: $focus-color;
+
+    &::after {
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 4px;
+
+        bottom: 0;
+        left: 0;
+        background-color: $focus-color;
+        border-radius: 2px;
+
+        animation: animation 750ms linear;
+    }
+}
+
+
+@keyframes animation {
+
+    10%,
+    90% {
+        transform: translateX(-1px);
+    }
+
+    20%,
+    80% {
+        transform: translateX(2px);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translateX(-4px);
+    }
+
+    40%,
+    60% {
+        transform: translateX(4px);
+    }
+}
+
+
+// Стилизация контактов
+.header-contact {
+    @extend %list;
+
+    display: flex;
+    margin-left: auto;
+}
+
+.header-contact__item:not(:last-child) {
+    margin-right: 30px;
+}
+
+.header-contact__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    text-decoration: none;
+    color: $text-second-black-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    fill: $text-second-black-color;
+
+    transition: color 250ms $delay, fill 250ms $delay;
+
+    &:hover,
+    &:focus {
+        color: $focus-color;
+        fill: $focus-color;
+    }
+}
+
+
+// Стилизация иконок в контактах
+.header-contact__thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}

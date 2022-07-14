@@ -1,0 +1,153 @@
+// Стилизация футера страницы
+.page-footer {
+    background-color: $background-second-color;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer {
+    display: flex;
+    align-items: baseline;
+}
+
+
+// Стилизация блока с адресом
+.footer-contact {
+    @extend %list;
+}
+
+.address {
+    font-style: normal;
+}
+
+.footer-contact__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+.footer-contact__address {
+    color: $text-third-white-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+
+.footer-contact__link {
+    text-decoration: none;
+    color: $text-contact-footer-white-color;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+
+    transition: color 250ms $delay;
+
+    &:hover,
+    &:focus {
+        color: $focus-color;
+    }
+}
+
+// Стилизация блока присоиденяйтесь
+.footer-connect {
+    margin-left: 70px;
+}
+
+.footer-connect__thumb {
+    margin-top: 20px;
+    width: 206px;
+}
+
+.footer-connect__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $background-primary-color;
+}
+
+
+
+// Стилизация блока подписывайтесь
+.footer-subscribe {
+    width: 570px;
+    height: 86px;
+    margin-left: auto;
+}
+
+.footer-subscribe__title {
+    margin-bottom: 20px;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $background-primary-color;
+}
+
+.footer-subscribe__mail-form {
+    display: flex;
+}
+
+.footer-subscribe__mail-input {
+    margin-right: 12px;
+
+    padding: 15px 16px;
+
+    width: 358px;
+    height: 50px;
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: $text-contact-footer-white-color;
+    background-color: $background-second-color;
+
+    border: $border-footer-subscribe;
+    border-radius: 4px;
+    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    // outline: none;
+
+    // &::placeholder {
+    //     font-size: 16px;
+    //     line-height: 1.25;
+    //     letter-spacing: 0.03em;
+    // }
+}
+
+.footer-subscribe__btn {
+    min-width: 200px;
+    height: 50px;
+
+    padding: 0;
+
+    background-color: $focus-color;
+    box-shadow: $shadow-button;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $background-primary-color;
+}
+
+.footer-subscribe__icon {
+    margin-left: 10px;
+
+    fill: $background-primary-color;
+}
