@@ -1,0 +1,57 @@
+// Стилизация блока Peculiarities
+
+// Cкрываем заголовок
+.section__title--hidden {
+    @extend %hidden;
+}
+
+.peculiarities-list {
+    @extend %list;
+
+    // display: flex;
+    // justify-content: space-between;
+}
+
+.peculiarities-list__item {
+    // width: 450px;
+    
+   &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+   
+}
+
+
+.peculiarities-list__thumb {
+    // width: 450px;
+    height: 120px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 30px;
+
+    background: $background-third-color;
+    border-radius: 4px;
+}
+
+.peculiarities-list__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    margin-bottom: 10px;
+
+    text-align: center;
+}
+
+
+
+.peculiarities-list__text {
+    color: $text-second-black-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}

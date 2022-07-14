@@ -18,7 +18,12 @@ img {
     padding-left: 15px;
     padding-right: 15px;
 
-    width: 1200px;
+    // outline: 1px dashed black;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
 }
 
 body {

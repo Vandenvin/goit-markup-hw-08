@@ -3,7 +3,7 @@
     @extend %list;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
 }
 
 .social-links__link {
@@ -36,6 +36,7 @@
 
 
 // социальные сети в футере
+
 
 .social-links__link--footer {
     fill: $background-primary-color;

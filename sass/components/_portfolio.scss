@@ -1,29 +1,39 @@
 // Стилизация страницы portfolio.html
 
 .portfolio {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 // Стилизация блока с кнопкапи-фильтрами
 
 // Cкрываем заголовок
-.section__title--hidden {
+.section__title {
     @extend %hidden;
+}
+
+.portfolio-filter{
+    max-width: 450px;
+    margin: 0;
 }
 
 .portfolio-filter {
     @extend %list;
 
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 
-    margin-bottom: 50px;
+    margin-bottom: 32px;
+}
+.portfolio-filter__item{
+    margin-bottom: 8px;
+
+    &:not(:last-child) {
+        margin-right: 8px;
+    }
 }
 
-.portfolio-filter__item:not(:last-child) {
-    margin-right: 8px;
-}
 
 .portfolio-filter__btn {
     background-color: $background-third-color;
@@ -54,17 +64,13 @@
 // Стилизация блока с карточками
 .portfolio-project {
     @extend %list;
-
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: -30px;
-    margin-left: -30px;
 }
 
 .portfolio-project__item {
-    flex-basis: calc(100% / 3 - 30px);
-    margin-top: 30px;
-    margin-left: 30px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
 }
 
 .portfolio-project__link {
@@ -76,11 +82,17 @@
     &:focus {
         box-shadow: $shadow-portfiolio-card-focus;
     }
+
 }
 
 .portfolio-project__card-img {
     position: relative;
     overflow: hidden;
+
+
+}
+.portfolio-project__img{
+    width: 100%;
 }
 
 .portfolio-project__hover-thumb {
@@ -118,7 +130,10 @@
     color: $background-primary-color;
 }
 
+
 .portfolio-project__img-sign {
+    width:100%;
+
     padding: 20px 24px;
 
     border-right: 1px solid $border-portfolio-card;

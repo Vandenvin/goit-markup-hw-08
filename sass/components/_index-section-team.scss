@@ -1,0 +1,57 @@
+// Стилизация блока team
+.team {
+    background-color: $background-third-color;
+}
+
+.team-list {
+    @extend %list;
+
+    // display: flex;
+    // justify-content: space-between;
+}
+
+.team-list__item {
+    background-color: $background-primary-color;
+    box-shadow: $shadow-team-item-card;
+    border-radius: 0px 0px 4px 4px;
+
+    padding-bottom: 24px;
+
+    &:not(:last-child){
+        margin-bottom: 30px;
+    }
+
+}
+
+.team-list__img {
+    margin-bottom: 30px;
+
+    width: 100%;
+    // height: 460px; не семмитрично если указывать высоту
+}
+
+.team-list__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 10px;
+}
+
+.team-list__text {
+    color: $text-second-black-color;
+    font-size: 16px;
+    line-height: 1.19;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    margin-bottom: 16px;
+}
+
+.team-social {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

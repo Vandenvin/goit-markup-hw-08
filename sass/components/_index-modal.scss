@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    min-width: 528px;
+    width: 450px;
 
     padding: 40px;
 
@@ -73,16 +73,18 @@
 .modal__title {
     margin-bottom: 12px;
 
+    text-align: center;
+
     font-weight: 700;
     font-size: 20px;
-    line-height: 1.15;
+    line-height: 1.5;
     letter-spacing: 0.03em;
 
     color: $text-primary-black-color;
 }
 
 .modal-form {
-    width: 448px;
+    width: 370px;
 }
 
 .form-field {
@@ -178,8 +180,8 @@
     margin-bottom: 30px;
 
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
+    font-size: 12px;
+    line-height: 1.16;
     letter-spacing: 0.03em;
 
     color: $text-second-black-color;
