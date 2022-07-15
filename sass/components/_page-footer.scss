@@ -6,12 +6,20 @@
 }
 
 .footer {
-    // display: flex;
-    // align-items: baseline;
-
-    text-align: center
+    text-align: center;
 }
 
+
+.footer-tablet-thumb{
+
+    @media screen and (min-width:768px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+}
 
 // Стилизация блока с адресом
 .footer-contact {
@@ -33,7 +41,6 @@
     letter-spacing: 0.03em;
 
 }
-
 
 
 .footer-contact__link {
@@ -58,7 +65,6 @@
 
 // Стилизация блока присоиденяйтесь
 .footer-connect {
-    // margin-left: 70px;
     margin-bottom: 60px;
 
     display: flex;
@@ -68,10 +74,7 @@
 }
 
 .footer-connect__thumb {
-    // margin-left: 122px;
-    margin-top: 20px;
     width: 206px;
-
 }
 
 .footer-connect__title {
@@ -115,12 +118,12 @@
 }
 
 .footer-subscribe__mail-input {
-    // margin-right: 12px;
-
+   
     padding-left: 15px;
 
     margin-bottom: 20px;
 
+    max-width: 450px;
     width: 100%;
     height: 50px;
 

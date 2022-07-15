@@ -31,7 +31,9 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    width: 450px;
+    // max-width: 450px;
+    // max-height: 609px;
+    // width: 450px;
 
     padding: 40px;
 
@@ -40,6 +42,12 @@
     border-radius: 4px;
 
     transition: transform 250ms $delay;
+
+    @media screen and (max-width: 1199px){
+            max-height: 609px;
+            max-width: 450px;
+            width: 100%;
+        }
 }
 
 .modal__close-btn {
@@ -84,7 +92,7 @@
 }
 
 .modal-form {
-    width: 370px;
+    max-width: 370px;
 }
 
 .form-field {

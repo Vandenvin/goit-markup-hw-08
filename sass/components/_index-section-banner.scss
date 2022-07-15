@@ -18,6 +18,11 @@
         url('../images/banner.jpg');
     background-color: $background-second-color;
 
+    @media screen and (min-width: 768px){
+        max-width: 768px;
+        height: 400px;
+    }
+
 }
 
 .banner__title {

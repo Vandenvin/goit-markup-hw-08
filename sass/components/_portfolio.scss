@@ -8,12 +8,12 @@
 // Стилизация блока с кнопкапи-фильтрами
 
 // Cкрываем заголовок
-.section__title {
+.section__title--hidden {
     @extend %hidden;
 }
 
 .portfolio-filter{
-    max-width: 450px;
+    // max-width: 100%;
     margin: 0;
 }
 
@@ -24,8 +24,13 @@
     flex-wrap: wrap;
     justify-content: center;
 
-    margin-bottom: 32px;
+    margin-bottom: 40px;
+
+    @media screen and (min-width: 768px){
+        margin-bottom: 30px;
+    }
 }
+
 .portfolio-filter__item{
     margin-bottom: 8px;
 
@@ -33,7 +38,6 @@
         margin-right: 8px;
     }
 }
-
 
 .portfolio-filter__btn {
     background-color: $background-third-color;
@@ -64,13 +68,35 @@
 // Стилизация блока с карточками
 .portfolio-project {
     @extend %list;
+
+    @media screen and (min-width:768px) {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
 }
 
 .portfolio-project__item {
 
-    &:not(:last-child) {
-        margin-bottom: 30px;
+    max-width: 450px;
+    width: 100%;
+
+    @media screen and (max-width:767px) {
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+        }
+
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+
+        margin: 15px;
+        flex-basis: calc((100% - 2 * 30px) / 2);
     }
+
+
+
 }
 
 .portfolio-project__link {
@@ -89,10 +115,14 @@
     position: relative;
     overflow: hidden;
 
-
 }
 .portfolio-project__img{
+    max-width: 450px;
     width: 100%;
+
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+    }
 }
 
 .portfolio-project__hover-thumb {
@@ -104,6 +134,7 @@
     align-items: center;
     justify-content: center;
 
+    
     width: 100%;
     height: 100%;
     background-color: $backround-portfolio-card-hover;
@@ -115,11 +146,12 @@
     .portfolio-project__link:focus & {
         transform: translateY(0);
     }
+
 }
 
 .portfolio-project__hover-text {
-    width: 322px;
-    height: 168px;
+    max-width: 402px;
+    // max-height: 140px;
 
     font-family: 'Roboto';
     font-weight: 400;
@@ -128,17 +160,30 @@
     letter-spacing: 0.03em;
 
     color: $background-primary-color;
+
+    @media screen and (min-width: 768px) {
+        max-width: 306px;
+    }
+
 }
 
 
 .portfolio-project__img-sign {
+    max-width: 450px;
     width:100%;
 
     padding: 20px 24px;
 
+
     border-right: 1px solid $border-portfolio-card;
     border-bottom: 1px solid $border-portfolio-card;
+    // border-bottom: 1px solid black;
     border-left: 1px solid $border-portfolio-card;
+
+    @media screen and (min-width: 768px) {
+        max-width: 354px;
+    }
+
 }
 
 .portfolio-project__title {
@@ -146,7 +191,6 @@
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-
 
     margin-bottom: 4px;
 }

@@ -8,13 +8,16 @@
     justify-content: center;
 
     margin: -15px;
-
 }
 
 .client-list__item{
     margin: 15px;
 
     flex-basis: calc((100% - 2 * 30px) / 2);
+
+    @media screen and (min-width: 768px){
+        flex-basis: calc((100% - 3 * 30px) / 3);        
+    }
 
 }
 
@@ -38,4 +41,9 @@
         fill: $focus-color;
         border: 1px solid $focus-color;
     }
+
+    @media screen and (min-width: 768px) {
+        width: 226px;
+    }
+
 }

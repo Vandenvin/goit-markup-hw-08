@@ -8,17 +8,28 @@
 .peculiarities-list {
     @extend %list;
 
-    // display: flex;
-    // justify-content: space-between;
+    @media screen and (min-width:768px){
+        display: flex;
+        flex-wrap: wrap;
+        margin: -15px;
+    }
+
+    
 }
 
 .peculiarities-list__item {
     // width: 450px;
     
-   &:not(:last-child) {
-        margin-bottom: 30px;
+    @media screen and (max-width:767px) {
+        &:not(:last-child) {
+                margin-bottom: 30px;
+            }
     }
-   
+
+    @media screen and (min-width:768px) {
+        margin: 15px;
+        flex-basis: calc((100% - 2 * 30px) / 2);
+    }
 }
 
 
