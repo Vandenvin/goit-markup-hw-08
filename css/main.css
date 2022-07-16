@@ -308,12 +308,7 @@ body {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
 }
 
 .header-navigation {
@@ -323,6 +318,48 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.menu-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+.menu-button:hover, .menu-button:focus {
+  fill: #2196f3;
+}
+
+.menu-button__icon-close {
+  display: none;
+}
+.menu-button.is-open .menu-button__icon-close {
+  display: block;
+}
+
+.menu-button.is-open .menu-button__icon-menu {
+  display: none;
+}
+
+.menu-container {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  max-width: 480px;
+  width: 100%;
+  padding: 48px 40px;
+  background-color: beige;
+  outline: 1px dashed black;
+}
+.menu-container.is-open {
+  display: block;
 }
 
 .navigation {
@@ -701,7 +738,6 @@ body {
 .page-header_logo {
   padding-top: 24px;
   padding-bottom: 25px;
-  margin-right: 93px;
   color: #000000;
 }
 

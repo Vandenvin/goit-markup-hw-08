@@ -4,23 +4,71 @@
 }
 
 .header {
-    display: flex;
-    align-items: center;
+    position: relative;
+    // display: flex;
+    // align-items: center;
 }
 
 
 // Стилизация навигации страницы (лого и сслыки переходы на другие страницы)
 
-.navigation {
-    @extend %list;
-}
 
 .header-navigation {
+    
+
     display: flex;
     align-items: center;
+    justify-content:space-between;
+
+}
+
+.menu-button {
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+
+    &:hover, &:focus {
+        fill: $focus-color;
+    }
+}
+
+.menu-button__icon-close{
+    display: none;
+
+    .menu-button.is-open &{
+        display: block;
+    }
+}
+
+.menu-button__icon-menu {
+    .menu-button.is-open & {
+        display: none;
+    }
+}
+
+.menu-container{
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    max-width: 480px;
+    width:100%;
+
+    padding: 48px 40px;
+
+    background-color: beige;
+    outline: 1px dashed black;
+
+    &.is-open{
+        display: block;
+    }
 }
 
 .navigation {
+    @extend %list;
     display: flex;
     position: relative;
 }
