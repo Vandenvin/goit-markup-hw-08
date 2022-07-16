@@ -3,6 +3,12 @@
 .portfolio {
     padding-top: 60px;
     padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+
 }
 
 // Стилизация блока с кнопкапи-фильтрами
@@ -10,11 +16,6 @@
 // Cкрываем заголовок
 .section__title--hidden {
     @extend %hidden;
-}
-
-.portfolio-filter{
-    // max-width: 100%;
-    margin: 0;
 }
 
 .portfolio-filter {
@@ -29,6 +30,10 @@
     @media screen and (min-width: 768px){
         margin-bottom: 30px;
     }
+
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 50px;
+    }
 }
 
 .portfolio-filter__item{
@@ -36,6 +41,10 @@
 
     &:not(:last-child) {
         margin-right: 8px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 0;
     }
 }
 
@@ -83,10 +92,10 @@
     width: 100%;
 
     @media screen and (max-width:767px) {
-            &:not(:last-child) {
-                margin-bottom: 30px;
-            }
+        &:not(:last-child) {
+            margin-bottom: 30px;
         }
+    }
 
     @media screen and (min-width: 768px) {
         max-width: 354px;
@@ -95,6 +104,11 @@
         flex-basis: calc((100% - 2 * 30px) / 2);
     }
 
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
+
+        flex-basis: calc((100% - 3 * 30px) / 3);
+    }
 
 
 }
@@ -108,20 +122,23 @@
     &:focus {
         box-shadow: $shadow-portfiolio-card-focus;
     }
-
 }
 
 .portfolio-project__card-img {
     position: relative;
     overflow: hidden;
-
 }
+
 .portfolio-project__img{
     max-width: 450px;
     width: 100%;
 
     @media screen and (min-width: 768px) {
         max-width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
     }
 }
 
@@ -165,10 +182,15 @@
         max-width: 306px;
     }
 
+    @media screen and (min-width: 1200px) {
+        max-width: 322px;
+    }
+
 }
 
 
 .portfolio-project__img-sign {
+    
     max-width: 450px;
     width:100%;
 
@@ -177,11 +199,14 @@
 
     border-right: 1px solid $border-portfolio-card;
     border-bottom: 1px solid $border-portfolio-card;
-    // border-bottom: 1px solid black;
     border-left: 1px solid $border-portfolio-card;
 
     @media screen and (min-width: 768px) {
         max-width: 354px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 370px;
     }
 
 }

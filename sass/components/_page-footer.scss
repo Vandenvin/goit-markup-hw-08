@@ -7,11 +7,16 @@
 
 .footer {
     text-align: center;
+
+    @media screen and (min-width: 1200px){
+        display: flex;
+        align-items: baseline;
+    }
 }
 
 
+// блок только для размера 768-1200px
 .footer-tablet-thumb{
-
     @media screen and (min-width:768px){
         display: flex;
         flex-wrap: wrap;
@@ -19,19 +24,34 @@
         align-items: center;
     }
 
+    @media screen and (min-width:1200px) {
+        text-align: start;
+        align-items:flex-start;
+    }
 }
 
 // Стилизация блока с адресом
+
 .footer-contact {
     @extend %list;
 }
 
 .address {
     font-style: normal;
+
+    @media screen and (min-width:1200px) {
+        width: 231px;
+    }
+    
 }
+
 
 .footer-contact__item:not(:last-child) {
     margin-bottom: 8px;
+
+    @media screen and (min-width:1200px) {
+        margin-bottom: 9px;
+    }
 }
 
 .footer-contact__address {
@@ -60,7 +80,14 @@
 }
 
 .footer-adress {
+
     margin-bottom: 60px;
+
+    @media screen and (min-width:1200px) {
+        margin-right: 70px;
+        margin-bottom:0;
+    }
+    
 }
 
 // Стилизация блока присоиденяйтесь
@@ -70,11 +97,19 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width:1200px) {
+        align-items: flex-start;
+
+        margin-top: 12px;
+    }
     
 }
 
 .footer-connect__thumb {
     width: 206px;
+    
+    
 }
 
 .footer-connect__title {
@@ -93,9 +128,15 @@
 
 // Стилизация блока подписывайтесь
 .footer-subscribe {
-    // width: 570px;
-    // height: 86px;
-    // margin-left: auto;
+
+    @media screen and (min-width:1200px) {
+        width: 570px;
+        height: 86px;
+        margin-left: auto;
+
+       text-align: start;
+    }
+
 }
 
 .footer-subscribe__title {
@@ -114,6 +155,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media screen and (min-width:1200px) {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
     
 }
 
@@ -136,6 +183,13 @@
 
     border: $border-footer-subscribe;
     border-radius: 4px;
+
+    @media screen and (min-width:1200px) {
+        margin-right: 12px;
+        margin-bottom: 0;
+        width: 358px;
+    }
+
 }
 
 .footer-subscribe__btn {

@@ -30,11 +30,16 @@
         margin: 15px;
         flex-basis: calc((100% - 2 * 30px) / 2);
     }
+
+    @media screen and (min-width:1200px) {
+        margin: 15px;
+        flex-basis: calc((100% - 4 * 30px) / 4);
+    }
+
 }
 
 
 .peculiarities-list__thumb {
-    // width: 450px;
     height: 120px;
 
     display: flex;
@@ -56,6 +61,10 @@
     margin-bottom: 10px;
 
     text-align: center;
+
+    @media screen and (min-width:768px){
+    text-align:start;
+    }
 }
 
 
