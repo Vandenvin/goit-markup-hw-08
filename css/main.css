@@ -335,6 +335,11 @@ body {
 .menu-button:hover, .menu-button:focus {
   fill: #2196f3;
 }
+@media screen and (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
 
 .menu-button__icon-close {
   display: none;
@@ -348,25 +353,46 @@ body {
 }
 
 .menu-container {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  max-width: 480px;
-  width: 100%;
+  z-index: 1;
   padding: 48px 40px;
-  background-color: beige;
+  background-color: #ffffff;
   outline: 1px dashed black;
 }
-.menu-container.is-open {
-  display: block;
+@media screen and (max-width: 767px) {
+  .menu-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  .menu-container.is-open {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .navigation__item:not(:last-child) {
@@ -396,7 +422,7 @@ body {
   color: #2196f3;
 }
 .navigation__link--current::after {
-  display: inline-block;
+  display: none;
   position: absolute;
   content: "";
   width: 100%;
@@ -407,6 +433,11 @@ body {
   border-radius: 2px;
   -webkit-animation: animation 750ms linear;
           animation: animation 750ms linear;
+}
+@media screen and (min-width: 768px) {
+  .navigation__link--current::after {
+    display: inline-block;
+  }
 }
 
 @-webkit-keyframes animation {
@@ -446,15 +477,12 @@ body {
             transform: translateX(4px);
   }
 }
-.header-contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: auto;
-}
-
-.header-contact__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .header-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .header-contact__link {
@@ -464,11 +492,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 32px;
-  padding-bottom: 32px;
   text-decoration: none;
   color: #757575;
   font-weight: 500;
@@ -829,9 +852,13 @@ body {
   opacity: 1;
   -webkit-transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: scroll;
 }
 
 .backdrop--is-hidden {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   opacity: 0;
   pointer-events: none;
 }
@@ -846,6 +873,9 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%) scale(1);
           transform: translate(-50%, -50%) scale(1);
+  max-width: 450px;
+  width: 100%;
+  min-height: 609px;
   padding: 40px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -856,17 +886,14 @@ body {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-@media screen and (max-width: 1199px) {
+@media screen and (min-width: 768px) {
   .modal {
-    max-height: 609px;
-    max-width: 450px;
-    width: 100%;
+    max-width: 528px;
   }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
-    width: 100%;
   }
 }
 
@@ -1103,7 +1130,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  max-width: 480px;
+  max-width: 1600px;
   height: 400px;
   padding-top: 118px;
   padding-bottom: 118px;
@@ -1116,13 +1143,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .banner {
-    max-width: 768px;
     height: 400px;
   }
 }
 @media screen and (min-width: 1200px) {
   .banner {
-    max-width: 1600px;
     height: 600px;
     padding-top: 200px;
     padding-bottom: 200px;

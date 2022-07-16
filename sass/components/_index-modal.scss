@@ -11,16 +11,20 @@
     opacity: 1;
 
     transition: opacity 250ms $delay;
+
+    overflow-y: scroll;
 }
 
 // Стилизация неактивного модального окна
 .backdrop--is-hidden {
+    align-items: center;
     opacity: 0;
     pointer-events: none;
 
     & .modal {
         transform: translate(-50%, -50%) scale(0.5);
     }
+
 }
 
 
@@ -31,6 +35,10 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
+    max-width: 450px;
+    width: 100%;
+    min-height: 609px;
+
     padding: 40px;
 
     background-color: $background-primary-color;
@@ -39,15 +47,12 @@
 
     transition: transform 250ms $delay;
 
-    @media screen and (max-width: 1199px){
-        max-height: 609px;
-        max-width: 450px;
-        width: 100%;
-    }
+    @media screen and (min-width: 768px) {
+            max-width: 528px;
+        }
 
     @media screen and (min-width: 1200px) {
         max-width: 528px;
-        width: 100%;
     }
 }
 
