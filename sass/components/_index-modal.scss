@@ -31,10 +31,6 @@
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
 
-    // max-width: 450px;
-    // max-height: 609px;
-    // width: 450px;
-
     padding: 40px;
 
     background-color: $background-primary-color;
@@ -44,10 +40,15 @@
     transition: transform 250ms $delay;
 
     @media screen and (max-width: 1199px){
-            max-height: 609px;
-            max-width: 450px;
-            width: 100%;
-        }
+        max-height: 609px;
+        max-width: 450px;
+        width: 100%;
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 528px;
+        width: 100%;
+    }
 }
 
 .modal__close-btn {
@@ -93,6 +94,11 @@
 
 .modal-form {
     max-width: 370px;
+
+    @media screen and (min-width: 1200px) {
+        max-width: 448px;
+    }
+
 }
 
 .form-field {
@@ -193,6 +199,11 @@
     letter-spacing: 0.03em;
 
     color: $text-second-black-color;
+
+    @media screen and (min-width: 1200px){
+        font-size: 14px;
+        line-height: 1.71;
+    }
 }
 
 .newsletter__icon {

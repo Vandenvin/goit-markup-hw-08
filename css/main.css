@@ -827,6 +827,12 @@ body {
     width: 100%;
   }
 }
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    width: 100%;
+  }
+}
 
 .modal__close-btn {
   position: absolute;
@@ -868,6 +874,11 @@ body {
 
 .modal-form {
   max-width: 370px;
+}
+@media screen and (min-width: 1200px) {
+  .modal-form {
+    max-width: 448px;
+  }
 }
 
 .form-field {
@@ -988,6 +999,12 @@ body {
   line-height: 1.16;
   letter-spacing: 0.03em;
   color: #757575;
+}
+@media screen and (min-width: 1200px) {
+  .newsletter__label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .newsletter__icon {
