@@ -9,11 +9,15 @@
 
 
 // Стилизация навигации страницы (лого и сслыки переходы на другие страницы)
-
 .header-navigation {
     display: flex;
     align-items: center;
     justify-content:space-between;
+
+    @media screen and (min-width:768px){
+        justify-content:flex-start;
+        
+    }
 }
 
 .menu-button {
@@ -47,15 +51,14 @@
 }
 
 .menu-container{
-
     z-index: 1;
-   
-    padding: 48px 40px;
+    
+    max-width: 480px;
+    width:100%;
+
+    padding: 48px 0 40px 48px;
 
     background-color: $background-primary-color;
-    outline: 1px dashed black;
-
-
 
     @media screen and (max-width:767px) {
         display: none;
@@ -70,10 +73,20 @@
     }
 
     @media screen and (min-width:768px){
+        max-width: 768px;
+        padding: 0;
         display: flex;
         flex-grow: 1;
         align-items: center;
-        
+        justify-content: flex-start;
+       
+    }
+
+    @media screen and (min-width:1200px){
+        max-width: 1200px;
+
+        align-items: center;
+        justify-content: flex-start;
     }
 }
 
@@ -81,35 +94,60 @@
     @extend %list;
     position: relative;
 
+    padding-bottom: 302px;  
+
     @media screen and (min-width: 768px) {
         display: flex;
+        padding-bottom: 0px;
+        // margin-right: 90px;
     }
-}
+
+}    
 
 .navigation__item:not(:last-child) {
-    margin-right: 50px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 50px;
+    }
+
+}
+
+
+.navigation__item:not(:last-child) {
+    padding-bottom: 32px;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+    }
 }
 
 .navigation__link {
     position: relative;
     display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
+    
 
     text-decoration: none;
     color: $text-primary-black-color;
 
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 40px;
+    line-height: 1.18;
     letter-spacing: 0.02em;
-
+    
     transition: color 250ms $delay;
 
     &:hover,
     &:focus {
         color: $focus-color;
         fill: $focus-color;
+    }
+
+    @media screen and (min-width:768px){
+        font-size: 14px;
+        line-height: 1.14;
+
+        padding-top: 32px;
+        padding-bottom: 32px;
     }
 }
 
@@ -166,48 +204,144 @@
 // Стилизация контактов
 .header-contact {
     @extend %list;
+    display: flex;
+    flex-direction: column-reverse;
+
+    @media screen and (min-width:768px) {
+        display: inline-block;
+        margin-left: auto;
+    }
 
     @media screen and (min-width:1200px){
         display: flex;   
+        flex-direction:row;
+        margin-left: auto;
     }
-
 }
 
-.header-contact__item:not(:last-child) {
-    // margin-right: 30px;
-}
-
-.header-contact__link {
+.header-contact__mail-link {
     display: flex;
     align-items: center;
-    // justify-content: center;
-
-    // padding-top: 32px;
-    // padding-bottom: 32px;
+  
+    padding-bottom: 64px;
 
     text-decoration: none;
     color: $text-second-black-color;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
-
-    fill: $text-second-black-color;
 
     transition: color 250ms $delay, fill 250ms $delay;
 
-    &:hover,
-    &:focus {
-        color: $focus-color;
-        fill: $focus-color;
+    @media screen and (min-width:768px) {
+        padding-bottom: 10px;
+        font-size: 12px;
+        fill: $text-second-black-color;
+
+        margin-right: 30px;
+
+        &:hover,
+        &:focus {
+            color: $focus-color;
+            fill: $focus-color;
+        }
+    }
+
+    @media screen and (min-width:1200px){
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 1.4;
+    }
+}
+.header-contact__tel-link {
+    display: flex;
+    align-items: center;
+
+    padding-bottom: 32px;
+
+    text-decoration: none;
+    color: $focus-color;
+    font-weight: 500;
+    font-size: 34px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+
+    transition: color 250ms $delay, fill 250ms $delay;
+
+    @media screen and (min-width:768px) {
+        padding-bottom: 0;
+
+        font-size: 12px;    
+
+        color: $text-second-black-color;
+        fill: $text-second-black-color;
+
+        &:hover,
+        &:focus {
+            color: $focus-color;
+            fill: $focus-color;
+        }
+    }
+
+    @media screen and (min-width:1200px) {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-size: 14px;
+        line-height: 1.4;
     }
 }
 
 
 // Стилизация иконок в контактах
 .header-contact__thumb {
+    display: none;
+
+    @media screen and (min-width:768px){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+    }
+}
+
+
+// Стилизация ссылок на соцсети в меню на мобильном устройстве
+.header-link{
+  
+    @extend %list;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+.header-link__item{
+    margin-right: 10px;    
+}
+
+.header-link__link{   
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;    
+    letter-spacing: 0.02em;
+    color: $focus-color;
+    
+}
+
+.header-link__line{
     margin-right: 10px;
+
+    width: 0px;
+    height: 22px;
+    
+    border-right: $border-form-field;   
 }

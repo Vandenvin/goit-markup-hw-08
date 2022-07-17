@@ -19,9 +19,16 @@
 .page-header_logo {
     padding-top: 24px;
     padding-bottom: 25px;
-    // margin-right: 93px;
 
     color: $text-logo-black-color;
+
+    @media screen and (min-width:768px){
+        margin-right: 87px;
+    }
+
+    @media screen and (min-width:1200px) {
+        margin-right: 92px;
+    }
 }
 
 // Изменения для логотипа в футтере
