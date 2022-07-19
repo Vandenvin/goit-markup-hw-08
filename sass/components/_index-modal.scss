@@ -47,10 +47,6 @@
 
     transition: transform 250ms $delay;
 
-    @media screen and (min-width: 768px) {
-            max-width: 528px;
-        }
-
     @media screen and (min-width: 1200px) {
         max-width: 528px;
     }
@@ -226,7 +222,7 @@
         border-color: transparent;
         opacity: 1;
 
-        background-image: url(../images/icon-check.svg);
+        background-image: url(../../images/index/icon-check.svg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
