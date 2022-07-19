@@ -1,10 +1,11 @@
 // Стилизация шапки страницы
 .page-header {
     border-bottom: 1px solid $border-header-line;
+    position: relative;
 }
 
 .header {
-    position: relative;
+    
 }
 
 
@@ -53,8 +54,11 @@
 .menu-container{
     z-index: 1;
     
-    max-width: 480px;
-    width:100%;
+    // max-width: 480px;
+    // width:100%;
+    // width: 100vw;
+
+    
 
     padding: 48px 0 40px 48px;
 
@@ -64,11 +68,19 @@
         display: none;
         position: absolute;
         top: 100%;
+        // position: fixed;
+        // top: 80px;
+
         left: 0;
-        width: 100%;
+
+        // width: 100%;
 
         &.is-open {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            // outline: 1px dashed black;
         }
     }
 
@@ -94,7 +106,7 @@
     @extend %list;
     position: relative;
 
-    padding-bottom: 302px;  
+    // padding-bottom: 302px;  
 
     @media screen and (min-width: 768px) {
         display: flex;
@@ -114,10 +126,10 @@
 
 
 .navigation__item:not(:last-child) {
-    padding-bottom: 32px;
+    margin-bottom: 32px;
 
     @media screen and (min-width: 768px) {
-        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }
 
@@ -206,6 +218,8 @@
     @extend %list;
     display: flex;
     flex-direction: column-reverse;
+
+    margin-top: auto;
 
     @media screen and (min-width:768px) {
         display: inline-block;

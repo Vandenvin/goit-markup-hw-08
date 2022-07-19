@@ -305,9 +305,6 @@ body {
 
 .page-header {
   border-bottom: 1px solid #ececec;
-}
-
-.header {
   position: relative;
 }
 
@@ -361,8 +358,6 @@ body {
 
 .menu-container {
   z-index: 1;
-  max-width: 480px;
-  width: 100%;
   padding: 48px 0 40px 48px;
   background-color: #ffffff;
 }
@@ -372,10 +367,18 @@ body {
     position: absolute;
     top: 100%;
     left: 0;
-    width: 100%;
   }
   .menu-container.is-open {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    outline: 1px dashed black;
   }
 }
 @media screen and (min-width: 768px) {
@@ -410,7 +413,6 @@ body {
 
 .navigation {
   position: relative;
-  padding-bottom: 302px;
 }
 @media screen and (min-width: 768px) {
   .navigation {
@@ -428,11 +430,11 @@ body {
 }
 
 .navigation__item:not(:last-child) {
-  padding-bottom: 32px;
+  margin-bottom: 32px;
 }
 @media screen and (min-width: 768px) {
   .navigation__item:not(:last-child) {
-    padding-bottom: 0;
+    margin-bottom: 0;
   }
 }
 
@@ -528,6 +530,7 @@ body {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin-top: auto;
 }
 @media screen and (min-width: 768px) {
   .header-contact {
@@ -705,9 +708,6 @@ body {
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
         justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1737,7 +1737,14 @@ body {
 }
 
 .portfolio-project__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1819,6 +1826,9 @@ body {
 .portfolio-project__img-sign {
   max-width: 450px;
   width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;

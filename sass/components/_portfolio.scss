@@ -114,7 +114,9 @@
 }
 
 .portfolio-project__link {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 
     transition: box-shadow 250ms $delay;
 
@@ -193,6 +195,8 @@
     
     max-width: 450px;
     width:100%;
+
+    flex-grow: 1;
 
     padding: 20px 24px;
 
