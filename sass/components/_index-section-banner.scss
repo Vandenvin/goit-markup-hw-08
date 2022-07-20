@@ -31,6 +31,7 @@
 
         background-image: linear-gradient(to right, $gradient-banner, $gradient-banner),
                 url('../images/index/banner/tablet/banner.jpg');
+                
 
         @media screen and (min-device-pixel-ratio:2), 
             screen and (min-resolution: 192dpi),

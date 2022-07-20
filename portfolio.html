@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
 
 <head>
     <meta charset="UTF-8">
@@ -23,74 +23,113 @@
                 <a href="./index.html" class="logo page-header_logo">
                     <span class="logo__prefix">Web</span>Studio
                 </a>
-                <button type="button" class="menu-button" aria-expanded="false" aria-controls="menu-container"
-                    data-menu-button>
+
+                <button type="button" class="menu-toggle js-open-menu" aria-expanded="false"
+                    aria-controls="mobile-menu">
                     <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-                        <use class="menu-button__icon-close" href="./images/icon.svg#icon-close-mobile"></use>
-                        <use class="menu-button__icon-menu" href="./images/icon.svg#icon-menu-mobile"></use>
+                        <use href="./images/icon.svg#icon-menu-mobile"></use>
                     </svg>
                 </button>
-                <div class="menu-container" id="menu-container" data-menu>
-                    <ul class="navigation">
-                        <li class="navigation__item">
-                            <a href="./index.html" class="navigation__link">Студія</a>
-                        </li>
 
-                        <li class="navigation__item">
-                            <a href="./portfolio.html"
-                                class="navigation__link   navigation__link--current">Портфоліо</a>
-                        </li>
+                <ul class="navigation">
+                    <li class="navigation__item">
+                        <a href="./index.html" class="navigation__link">Студія</a>
+                    </li>
 
-                        <li class="navigation__item">
-                            <a href="#portfolio-footer" class="navigation__link"> Контакти</a>
-                        </li>
-                    </ul>
-                    <ul class="header-contact">
-                        <li class="header-contact__item">
-                            <a href="mailto:info@devstudio.com" class="header-contact__mail-link">
+                    <li class="navigation__item">
+                        <a href="./portfolio.html" class="navigation__link  navigation__link--current">Портфоліо</a>
+                    </li>
 
-                                <div class="header-contact__thumb">
-                                    <svg class="header-contact__icon" width="16" height="12">
-                                        <use href="./images/sprite.svg#icon-mail"></use>
-                                    </svg>
-                                </div>
-                                info@devstudio.com
-                            </a>
-                        </li>
-
-                        <li class="header-contact__item">
-                            <a href="tel:+380961111111" class="header-contact__tel-link">
-
-                                <div class="header-contact__thumb">
-                                    <svg class="header-contact__icon" width="10" height="16">
-                                        <use href="./images/sprite.svg#icon-smartphone"></use>
-                                    </svg>
-                                </div>
-                                +38 096 111 11 11
-
-                            </a>
-                        </li>
-                    </ul>
-                    <ul class="header-link">
-                        <li class="header-link__item">
-                            <a href="#" class="header-link__link">Instagram</a>
-                        </li>
-                        <p class="header-link__line"></p>
-                        <li class="header-link__item">
-                            <a href="#" class="header-link__link">Twitter</a>
-                        </li>
-                        <p class="header-link__line"></p>
-                        <li class="header-link__item">
-                            <a href="#" class="header-link__link">Facebook</a>
-                        </li>
-                        <p class="header-link__line"></p>
-                        <li class="header-link__item">
-                            <a href="#" class="header-link__link">LinkedIn</a>
-                        </li>
-                    </ul>
-                </div>
+                    <li class="navigation__item">
+                        <a href="#portfolio-footer" class="navigation__link">Контакти</a>
+                    </li>
+                </ul>
             </nav>
+
+            <ul class="header-contact">
+                <li class="header-contact__item">
+                    <a href="mailto:info@devstudio.com" class="header-contact__link">
+
+                        <div class="header-contact__thumb">
+                            <svg class="header-contact__icon" width="16" height="12">
+                                <use href="./images/sprite.svg#icon-mail"></use>
+                            </svg>
+                        </div>
+                        info@devstudio.com
+                    </a>
+                </li>
+
+                <li class="header-contact__item">
+                    <a href="tel:+380961111111" class="header-contact__link">
+
+                        <div class="header-contact__thumb">
+                            <svg class="header-contact__icon" width="10" height="16">
+                                <use href="./images/sprite.svg#icon-smartphone"></use>
+                            </svg>
+                        </div>
+                        +38 096 111 11 11
+
+                    </a>
+                </li>
+
+            </ul>
+
         </div>
+
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button type="button" class="menu-toggle js-close-menu">
+                <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+                    <use href="./images/icon.svg#icon-close-mobile"></use>
+                </svg>
+            </button>
+
+            <div class="mobile-menu">
+                <ul class="mobile-menu-nav">
+                    <li class="mobile-menu-nav__item">
+                        <a href="./index.html" class="mobile-menu-nav__link">Студія</a>
+                    </li>
+
+                    <li class="mobile-menu-nav__item">
+                        <a href="./portfolio.html"
+                            class="mobile-menu-nav__link   mobile-menu-nav__link--current">Портфоліо</a>
+                    </li>
+
+                    <li class="mobile-menu-nav__item">
+                        <a href="#main-footer" class="mobile-menu-nav__link"> Контакти</a>
+                    </li>
+                </ul>
+
+                <ul class="mobile-menu-contact">
+                    <li class="mobile-menu-contact__item">
+                        <a href="mailto:info@devstudio.com" class="mobile-menu-contact__mail-link">
+                            info@devstudio.com
+                        </a>
+                    </li>
+
+                    <li class="mobile-menu-contact__item">
+                        <a href="tel:+380961111111" class="mobile-menu-contact__tel-link">
+                            +38 096 111 11 11
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="mobile-menu-social">
+                    <li class="mobile-menu-social__item">
+                        <a href="#" class="mobile-menu-social__link">Instagram</a>
+                    </li>
+                    <li class="mobile-menu-social__item">
+                        <a href="#" class="mobile-menu-social__link">Twitter</a>
+                    </li>
+                    <li class="mobile-menu-social__item">
+                        <a href="#" class="mobile-menu-social__link">Facebook</a>
+                    </li>
+                    <li class="mobile-menu-social__item">
+                        <a href="#" class="mobile-menu-social__link">LinkedIn</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
     </header>
 
     <!-- Тело страницы -->
@@ -125,7 +164,7 @@
                                             srcset="./images/portfolio/tablet/project1.jpg 1x, ./images/portfolio/tablet/project1@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project1.jpg 1x, ./images/portfolio/mobile/project1@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project1.jpg" class="portfolio-project__img"
-                                            width="354" alt="Ноутбук с зображенням веб-сайта" loading=“lazy” />
+                                            width="354" alt="Ноутбук с зображенням веб-сайта" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -152,7 +191,7 @@
                                             srcset="./images/portfolio/tablet/project2.jpg 1x, ./images/portfolio/tablet/project2@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project2.jpg 1x, ./images/portfolio/mobile/project2@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project2.jpg" class="portfolio-project__img"
-                                            width="354" alt="Два баскетболіста" loading=“lazy” />
+                                            width="354" alt="Два баскетболіста" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -179,7 +218,7 @@
                                             srcset="./images/portfolio/tablet/project3.jpg 1x, ./images/portfolio/tablet/project3@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project3.jpg 1x, ./images/portfolio/mobile/project3@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project3.jpg" class="portfolio-project__img"
-                                            width="354" alt="Риба с логотипом компанії" loading=“lazy” />
+                                            width="354" alt="Риба с логотипом компанії" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -207,7 +246,7 @@
                                             srcset="./images/portfolio/tablet/project4.jpg 1x, ./images/portfolio/tablet/project4@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project4.jpg 1x, ./images/portfolio/mobile/project4@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project4.jpg" class="portfolio-project__img"
-                                            width="354" alt="Чорні навушники" loading=“lazy” />
+                                            width="354" alt="Чорні навушники" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -234,7 +273,7 @@
                                             srcset="./images/portfolio/tablet/project5.jpg 1x, ./images/portfolio/tablet/project5@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project5.jpg 1x, ./images/portfolio/mobile/project5@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project5.jpg" class="portfolio-project__img"
-                                            width="354" alt="Дві коробки" loading=“lazy” />
+                                            width="354" alt="Дві коробки" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -263,7 +302,7 @@
                                             srcset="./images/portfolio/tablet/project6.jpg 1x, ./images/portfolio/tablet/project6@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project6.jpg 1x, ./images/portfolio/mobile/project6@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project6.jpg" class="portfolio-project__img"
-                                            width="354" alt="Монітор с зображенням веб-сайта" loading=“lazy” />
+                                            width="354" alt="Монітор с зображенням веб-сайта" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -292,7 +331,7 @@
                                             srcset="./images/portfolio/tablet/project7.jpg 1x, ./images/portfolio/tablet/project7@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project7.jpg 1x, ./images/portfolio/mobile/project7@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project7.jpg" class="portfolio-project__img"
-                                            width="354" alt="Розгорнута книга" loading=“lazy” />
+                                            width="354" alt="Розгорнута книга" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -320,7 +359,7 @@
                                             srcset="./images/portfolio/tablet/project8.jpg 1x, ./images/portfolio/tablet/project8@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project8.jpg 1x, ./images/portfolio/mobile/project8@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project8.jpg" class="portfolio-project__img"
-                                            width="354" alt="Бірка з логотипом" loading=“lazy” />
+                                            width="354" alt="Бірка з логотипом" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -348,7 +387,7 @@
                                             srcset="./images/portfolio/tablet/project9.jpg 1x, ./images/portfolio/tablet/project9@2x.jpg 2x" />
                                         <img srcset="./images/portfolio/mobile/project9.jpg 1x, ./images/portfolio/mobile/project9@2x.jpg 2x"
                                             src="./images/portfolio/mobile/project9.jpg" class="portfolio-project__img"
-                                            width="354" alt="Ноутбук з зображенням телефону" loading=“lazy” />
+                                            width="354" alt="Ноутбук з зображенням телефону" loading="lazy" />
                                     </picture>
 
                                     <div class="portfolio-project__hover-thumb">
@@ -390,9 +429,8 @@
                                     info@example.com</a>
                             </li>
                             <li class="footer-contact__item">
-                                <a href=" tel:+380991111111" class="footer-contact__link">+38
-                                    099 111 11
-                                    11</a>
+                                <a href="tel:+380991111111" class="footer-contact__link">
+                                    +38 096 111 11 11</a>
                             </li>
                         </ul>
                     </address>
@@ -465,7 +503,10 @@
 
     </footer>
 
-    <script src="./js/menu.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script src="./js/mobile-menu.js"></script>
 </body>
 
 </html>
